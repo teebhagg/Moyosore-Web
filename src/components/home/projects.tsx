@@ -1,32 +1,18 @@
 import React from 'react'
-import Image from 'next/image'
-import { coverImg } from '@/utils/data/images';
+import ProjectCard from '../projects/project_card'
+import { ProjectsPeekInterface } from '@/utils/interface/home';
 
-export default function ProjectsPeek() {
-  return (
-    <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 w-full'>
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-    </div>
-  )
+interface Props {
+    data: ProjectsPeekInterface[];
 }
 
-const ProjectCard = () => {
-    return (
-        <div className="rounded-lg p-16 space-y-3 bg-[#F6F5F2]">
-            <Image
-                src={coverImg}
-                alt="Moyosore"
-                width={400}
-                height={400}
-                className="w-1/3 aspect-[4/3] rounded-sm object-cover"
-            />
-            <p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-            <h1 className="text-4xl text-right font-light">Moyosore</h1>
-        </div>
-    );
+export default function ProjectsPeek(props: Props) {
+  const { data } = props;
+  return (
+    <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 w-full'>
+      {data.map((project: ProjectsPeekInterface, index: number) => (
+        <ProjectCard key={index} projectData={project} />
+      ))}
+    </div>
+  )
 }

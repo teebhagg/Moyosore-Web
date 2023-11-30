@@ -1,9 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { coverImg } from '@/utils/data/images'
 
 export default function BlogCard() {
   return (
+    <Link href="/blog/[id]" as="/blog/1">
     <div className='rounded-xl space-y-4 p-[12px] hover:p-[10px] hover:border-2 hover:border-slate-300 hover:shadow-lg'>
       <Image
         src={coverImg}
@@ -18,5 +20,6 @@ export default function BlogCard() {
         <p>Category</p>
       </div>
     </div>
+    </Link>
   )
 }

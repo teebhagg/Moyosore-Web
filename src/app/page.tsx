@@ -1,22 +1,51 @@
-import AboutPeek from '@/components/home/about_peek'
-import BlogPeek from '@/components/home/blog_peek'
-import ContactBanner from '@/components/home/contact_banner'
-import CoverImage from '@/components/home/cover_image'
-import PortfolioPeek from '@/components/home/portfolio_peek'
-import ProjectsPeek from '@/components/home/projects'
-import Image from 'next/image'
+import AboutPeek from "@/components/home/about_peek";
+import BlogPeek from "@/components/home/blog_peek";
+import ContactBanner from "@/components/home/contact_banner";
+import CoverImage from "@/components/home/cover_image";
+import PortfolioPeek from "@/components/home/portfolio_peek";
+import ProjectsPeek from "@/components/home/projects";
+import Image from "next/image";
+import { client } from "../../sanity/client";
+import { HomeInterface } from "@/utils/interface/home";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const { homeData } = await getData();
+
+  console.log(homeData[0].contactMe);
+
   return (
     <main className="max-w-[1800px] mx-auto">
       <div className="flex flex-col items-center justify-between py-24 px-6 space-y-24">
-        <CoverImage />
-        <AboutPeek />
-        <PortfolioPeek />
-        <BlogPeek />
-        <ProjectsPeek />
-        <ContactBanner />
+        <CoverImage
+          aboutLink={homeData[0].coverImage.aboutLink}
+          image={homeData[0].coverImage.image}
+        />
+        <AboutPeek
+          header={homeData[0].aboutPeek.header}
+          subheader={homeData[0].aboutPeek.subheader}
+          image={homeData[0].aboutPeek.image}
+          aboutLink={homeData[0].aboutPeek.aboutLink}
+        />
+        <PortfolioPeek images={homeData[0].portfolioPeek} />
+        <BlogPeek
+          header={homeData[0].blogPeek.header}
+          subheader={homeData[0].blogPeek.subheader}
+          image={homeData[0].blogPeek.image}
+          blogLink={homeData[0].blogPeek.blogLink}
+        />
+        <ProjectsPeek data={homeData[0].projectsPeek} />
+        <ContactBanner
+          subTitle={homeData[0].contactMe.subTitle}
+          link={homeData[0].contactMe.link}
+          title={homeData[0].contactMe.title}
+        />
       </div>
     </main>
-  )
+  );
 }
+export const getData = async () => {
+  const homeQuery = "*[_type == 'home']";
+  const homeData: HomeInterface[] = await client.fetch(homeQuery);
+
+  return { homeData };
+};
