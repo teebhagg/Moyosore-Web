@@ -7,6 +7,7 @@ import ProjectsPeek from "@/components/home/projects";
 import Image from "next/image";
 import { client } from "../../sanity/client";
 import { HomeInterface } from "@/utils/interface/home";
+import { getData } from "@/utils/data/home_data";
 
 export default async function HomePage() {
   const { homeData } = await getData();
@@ -43,9 +44,9 @@ export default async function HomePage() {
     </main>
   );
 }
-export const getData = async () => {
-  const homeQuery = "*[_type == 'home']";
-  const homeData: HomeInterface[] = await client.fetch(homeQuery);
+// export const getData = async () => {
+//   const homeQuery = "*[_type == 'home']";
+//   const homeData: HomeInterface[] = await client.fetch(homeQuery);
 
-  return { homeData };
-};
+//   return { homeData };
+// };
