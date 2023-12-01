@@ -15,7 +15,7 @@ const CarouselSlider = () => {
   return (
     <div>
       <h2> Single Item</h2>
-      {/* <Slider {...settings} >
+      <Slider {...settings} className="w-full" >
         <div>
           <h3>1</h3>
         </div>
@@ -34,7 +34,7 @@ const CarouselSlider = () => {
         <div>
           <h3>6</h3>
         </div>
-      </Slider> */}
+      </Slider>
     </div>
   );
 };
