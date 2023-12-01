@@ -18,7 +18,7 @@ export default async function ContactPage() {
             alt="Moyosore"
             width={400}
             height={400}
-            className="w-full aspect-[4/5] md:aspect-[3/4] max-h-[700px] rounded-lg object-cover"
+            className="w-full aspect-[4/5] rounded-lg object-cover"
           />
         </div>
         <div className="w-full h-full space-y-20 md:w-1/2">
@@ -30,7 +30,7 @@ export default async function ContactPage() {
               key={index}
               href={ social.title === "Email" ? `mailto:${social.link}` : social.link}
               target="_blank"
-              className="text-2xl hover:underline"
+              className={`text-2xl hover:underline ${social.title === "Email" ? "flex":"hidden"}`}
             >
               {social.title}
             </a>

@@ -4,14 +4,16 @@ import { coverImg } from "@/utils/data/images";
 import Image from "next/image";
 import React from "react";
 import { urlFor } from "../../../sanity/client";
+import { Separator } from "@radix-ui/react-separator";
 
 export default async function AboutPage() {
   const { aboutData } = await getAboutData();
   const { title, subTitle, imageCarousel, aboutCard } = aboutData[0];
   return (
-    <main className="max-w-[1800px] mx-auto">
-      <p className="text-5xl font-bold px-6 pt-20">About</p>
-      <div className="flex items-center justify-between py-4 px-6">
+    <main className="max-w-[1800px] mx-auto space-y-10">
+      <p className="text-lg px-6 pt-20 text-center">{title}</p>
+      <p className="text-5xl font-semibold px-6 text-center">{subTitle}</p>
+      <div className="flex items-center justify-between py-8 px-6 ">
         <AboutPeek
           header={aboutCard.header}
           subheader={aboutCard.body}

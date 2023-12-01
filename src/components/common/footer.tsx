@@ -22,7 +22,7 @@ const Footer = async () => {
               className="text-2xl hover:underline"
             >
               {/* Show Ico based on title */}
-              {social.title === "Email" ? <MailIcon size={30} /> : social.title === "Instagram" ? <InstagramIcon size={30} /> : <YoutubeIcon size={30} />}
+              {social.title === "Email" ? <MailIcon size={23} /> : social.title === "Instagram" ? <InstagramIcon size={23} /> : <YoutubeIcon size={23} />}
             </a>
           ))}
         </div>
