@@ -59,6 +59,7 @@ export interface HomeInterface {
   _createdAt: string;
   coverImage: {
     image: any[];
+    title: string;
     aboutLink: string;
   };
   _rev: string;

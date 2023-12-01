@@ -12,14 +12,15 @@ import { getData } from "@/utils/data/home_data";
 export default async function HomePage() {
   const { homeData } = await getData();
 
-  console.log(homeData[0].contactMe);
+  console.log(homeData[0].coverImage);
 
   return (
     <main className="max-w-[1800px] mx-auto">
       <div className="flex flex-col items-center justify-between py-24 px-6 space-y-24">
         <CoverImage
-          aboutLink={homeData[0].coverImage.aboutLink}
           image={homeData[0].coverImage.image}
+          title={homeData[0].coverImage.title}
+          aboutLink={homeData[0].coverImage.aboutLink}
         />
         <AboutPeek
           header={homeData[0].aboutPeek.header}

@@ -21,7 +21,7 @@ export default function CoverImage(props: Props) {
       className="w-full h-[800px] rounded-lg">
       {/* Title and Button in center */}
       <div className="w-full h-full flex flex-col justify-center items-center space-y-16">
-        <h1 className="text-5xl font-bold text-white">Moyosore</h1>
+        <h1 className="text-5xl font-bold text-white">{title}</h1>
         <Button variant="ghost" className="mt-4 text-white border hover:border-0">
           {aboutLink}
         </Button>
