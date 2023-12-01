@@ -53,6 +53,13 @@ export interface HomeInterface {
   };
   contactMe: {
     subTitle: string;
+    banner: {
+      _type: string;
+      asset: {
+        _ref: string;
+        _type: string;
+      };
+    };
     link: string;
     title: string;
   };

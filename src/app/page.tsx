@@ -12,7 +12,7 @@ import { getData } from "@/utils/data/home_data";
 export default async function HomePage() {
   const { homeData } = await getData();
 
-  console.log(homeData[0].coverImage);
+  console.log(homeData[0].contactMe); 
 
   return (
     <main className="max-w-[1800px] mx-auto">
@@ -40,6 +40,7 @@ export default async function HomePage() {
           subTitle={homeData[0].contactMe.subTitle}
           link={homeData[0].contactMe.link}
           title={homeData[0].contactMe.title}
+          banner={homeData[0].contactMe.banner}
         />
       </div>
     </main>

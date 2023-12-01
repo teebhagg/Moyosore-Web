@@ -1,19 +1,21 @@
 import { coverImg } from "@/utils/data/images";
 import React from "react";
 import { Button } from "../ui/button";
+import { urlFor } from "../../../sanity/client";
 
 interface Props  {
   subTitle: string;
   link: string;
   title: string;
+  banner: any
 }
 
 export default function ContactBanner(props: Props) {
-  const { subTitle, link, title } = props;
+  const { subTitle, link, title, banner } = props;
   return (
     <div
       style={{
-        backgroundImage: `url('${coverImg}')`,
+        backgroundImage: `url('${urlFor(banner).url()}')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
