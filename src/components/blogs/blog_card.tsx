@@ -21,10 +21,10 @@ export default function BlogCard(props: Props) {
         className="w-full aspect-[4/3] rounded-lg object-cover" 
       />
       <h1 className='text-2xl'>{blogData.title}</h1>
-      <div className="flex justify-between">
+      {/* <div className="flex justify-between">
         <p>Published</p>
         <p>{blogData.category._ref}</p>
-      </div>
+      </div> */}
     </div>
     </Link>
   )
