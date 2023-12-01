@@ -35,7 +35,7 @@ export default function BlogPost() {
   return (
     <main className='max-w-[1800px] mx-auto px-6 py-24 space-y-10'>
         {/* Cover Image */}
-        {/* <BlogPostCoverImage image={coverImage} title={title} /> */}
+        <BlogPostCoverImage image={coverImage} title={title} />
             
             {/* Content */}
         <div className="space-y-20 text-center">
