@@ -13,7 +13,7 @@ export default function PortfolioPage() {
             <PortfolioHeader />
             <Separator className="mt-5" />
             <Separator className="mb-5" />
-            <CarouselSlider />
+            {/* <CarouselSlider /> */}
           </div>
         </main>
       );

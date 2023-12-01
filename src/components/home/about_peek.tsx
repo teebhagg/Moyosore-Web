@@ -40,10 +40,12 @@ export default function AboutPeek(props: Props) {
           className="flex flex-col justify-between p-6 space-y-7 md:p-8 lg:p-12 lg:w-1/2">
           <h1 className="text-5xl font-medium">{header}</h1>
           <p className="text-lg">{subheader}</p>
-          <Button variant="outline" className="mt-4">
-            {" "}
-            {aboutLink}{" "}
-          </Button>
+          <Link href="/about">
+            <Button variant="outline" className="mt-4">
+              {" "}
+              {aboutLink}{" "}
+            </Button>
+          </Link>
         </div>
       </div>
     </Card>

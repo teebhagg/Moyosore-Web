@@ -2,6 +2,7 @@ import { coverImg } from "@/utils/data/images";
 import React from "react";
 import { Button } from "../ui/button";
 import { urlFor } from "../../../sanity/client";
+import { Link } from "lucide-react";
 
 interface Props  {
   subTitle: string;
@@ -29,9 +30,11 @@ export default function ContactBanner(props: Props) {
         <h1 id="title" className="text-4xl font-bold text-white">
           {title}
         </h1>
+        <a href="/contact">
         <Button variant="ghost" className="mt-4 text-white border hover:border-0">
           {link}
         </Button>
+        </a>
       </div>
     </div>
   );

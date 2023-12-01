@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { coverImg } from '@/utils/data/images'
 import { urlFor } from '../../../sanity/client';
 import { Button } from '../ui/button';
+import Link from 'next/link';
 
 interface Props {
   images: any[];
@@ -18,9 +19,11 @@ export default function PortfolioPeek(props: Props) {
         ))}
       </div>
       <div className='flex justify-center'>
+        <Link href="/portfolio">
         <Button variant="ghost" className="mt-4  border">
             View Portfolio
           </Button>
+        </Link>
       </div>
     </div>
   )

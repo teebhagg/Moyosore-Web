@@ -15,12 +15,6 @@ export default async function ProjectsPage() {
           <ProjectCard key={index} projectData={project} />
         ))}
       </div>
-      <div className="px-6">
-        <SectionBanner />
-        <Separator className="mt-5" />
-        <Separator className="mb-5" />
-        <SectionBanner />
-      </div>
     </main>
   );
 }
