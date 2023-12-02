@@ -16,7 +16,7 @@ export default async function HomePage() {
 
   return (
     <main className="max-w-[1800px] mx-auto">
-      <div className="flex flex-col items-center justify-between py-24 px-6 space-y-24">
+      <div className="flex flex-col items-center justify-between pt-10 pb-24 px-4 space-y-24">
         <CoverImage
           image={homeData[0].coverImage.image}
           title={homeData[0].coverImage.title}

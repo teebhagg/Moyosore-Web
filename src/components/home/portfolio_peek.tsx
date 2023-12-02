@@ -36,7 +36,7 @@ const ImageCard = ({url}:{url: string}) => {
         alt="Moyosore"
         width={600}
         height={600}
-        className="w-full aspect-[4/3] rounded-lg object-cover bg-red-500"
+        className="w-full aspect-[4/5] rounded-lg object-cover bg-red-500"
       />
     )
 }

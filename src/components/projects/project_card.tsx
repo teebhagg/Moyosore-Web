@@ -16,7 +16,7 @@ export default function ProjectCard(props: Props) {
                 alt="Moyosore"
                 width={400}
                 height={400}
-                className="w-2/4 aspect-[4/3] rounded-sm object-cover"
+                className="w-2/4 aspect-[3/4] rounded-sm object-cover"
             />
             <p className="text-xl">{projectData.body}</p>
             <h1 className="text-3xl text-right font-light">{projectData.author}</h1>
