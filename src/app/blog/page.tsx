@@ -6,7 +6,7 @@ import { client } from "../../../sanity/client";
 export default async function BlogPage() {
   // const { blogData } = await getBlogData();
 
-  const data = await client.fetch(`*[_type == "blog"] | order(_createdAt desc)`);
+  const data = await client.fetch(`*[_type == "blog"] | order(_createdAt desc)  `);
   console.log(data);
   return (
     <main className="max-w-[1800px] mx-auto">
