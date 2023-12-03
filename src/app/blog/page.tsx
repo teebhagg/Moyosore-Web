@@ -6,11 +6,14 @@ import { client } from "../../../sanity/client";
 export default async function BlogPage() {
   // const { blogData } = await getBlogData();
 
-  const data = await client.fetch(`*[_type == "blog"] | order(_createdAt desc)  `);
-  console.log(data);
+  const data = await client.fetch<BlogInterface[]>(
+    `*[_type == "blog"] | order(_createdAt desc)`,
+    { next: { revalidate: 10 }, cache: "no-store" }
+  );
+  console.log(data.length);
   return (
     <main className="max-w-[1800px] mx-auto">
-        <p className="text-5xl font-bold px-6 pt-20">Blogs</p>
+      <p className="text-5xl font-bold px-6 pt-20">Blogs</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:grid-cols-3 items-center justify-between py-4 px-6">
         {data.map((blog: BlogInterface, index: number) => (
           <BlogCard key={index} blogData={blog} />

@@ -12,8 +12,6 @@ import { getData } from "@/utils/data/home_data";
 export default async function HomePage() {
   const { homeData } = await getData();
 
-  console.log(homeData[0].contactMe); 
-
   return (
     <main className="max-w-[1800px] mx-auto">
       <div className="flex flex-col items-center justify-between pt-10 pb-24 px-4 space-y-24">
