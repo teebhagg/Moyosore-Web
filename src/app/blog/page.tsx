@@ -7,7 +7,7 @@ export default async function BlogPage() {
   // const { blogData } = await getBlogData();
 
   const data = await client.fetch<BlogInterface[]>(
-    `*[_type == "blog"] | order(_createdAt desc)`,
+    `*[_type == "blog"] | order(_createdAt desc) `,
     { next: { revalidate: 10 }, cache: "no-store" }
   );
   console.log(data.length);
