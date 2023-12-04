@@ -3,13 +3,13 @@ import { getBlogData } from "@/utils/data/blog_data";
 import { BlogInterface } from "@/utils/interface/blog";
 import { client } from "../../../sanity/client";
 
+export const revalidate = 1;
+
 export default async function BlogPage() {
   // const { blogData } = await getBlogData();
 
   const data = await client.fetch<BlogInterface[]>(
-    ` *[_type == "blog"] | order(_createdAt desc) `,
-    { next: { revalidate: 10 }, cache: "no-store" }
-  );
+    `*[_type == "blog"] | order(_createdAt desc)`,);
   console.log(data.length);
   return (
     <main className="max-w-[1800px] mx-auto">
@@ -22,3 +22,4 @@ export default async function BlogPage() {
     </main>
   );
 }
+
