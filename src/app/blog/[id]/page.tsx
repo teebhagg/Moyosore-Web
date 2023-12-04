@@ -41,7 +41,7 @@ export default function BlogPost() {
         <div className="space-y-20 text-center">
             <p className="text-5xl font-bold">{subTitle}</p>
             <p className="text-lg">
-                <PortableText value={body} />
+                <PortableText value={body}  />
             </p>
         </div>
     </main>
