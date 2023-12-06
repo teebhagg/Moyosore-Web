@@ -33,12 +33,12 @@ export default function BlogPost() {
   const { title, body, coverImage, subTitle } = blogData
 
   return (
-    <main className='max-w-[1800px] mx-auto px-6 pt-10 pb-24 space-y-10'>
+    <main className='max-w-[1800px] mx-auto px-6 pt-10 pb-24 space-y-16'>
         {/* Cover Image */}
         <BlogPostCoverImage image={coverImage} title={title} />
             
             {/* Content */}
-        <div className="space-y-5 lg:space-y-20 text-center">
+        <div className="space-y-5 lg:space-y-10 text-center">
             <p className="text-3xl lg:text-5xl font-bold">{subTitle}</p>
             <p className="text-lg">
                 <PortableText value={body}  />
