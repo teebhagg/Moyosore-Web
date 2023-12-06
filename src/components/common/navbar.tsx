@@ -21,7 +21,9 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <h1 className="text-3xl capitalize">Moyosore</h1>
+        <Link href="/" className="text-2xl md:text-4xl capitalize">
+          Moyosore
+        </Link>
         <Drawer />
 
         <div className="hidden md:flex items-center space-x-8">

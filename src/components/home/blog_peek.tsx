@@ -29,7 +29,7 @@ export default function BlogPeek(props: Props) {
         <div
           id="post"
           className="flex flex-col justify-between p-6 space-y-7 md:p-8 lg:p-12 lg:w-1/2">
-          <h1 className="text-5xl font-medium">{header}</h1>
+          <h1 className="text-3xl lg:text-5xl font-medium">{header}</h1>
           <p className="text-lg">{subheader}</p>
           <Link href="/blog">
             <Button variant="outline" className="mt-4">

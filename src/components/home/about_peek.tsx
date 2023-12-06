@@ -29,8 +29,8 @@ export default function AboutPeek(props: Props) {
             <Image
               src={urlFor(image).url()}
               alt="Moyosore"
-              width={900}
-              height={900}
+              width={500}
+              height={500}
               className="h-full w-full max-h-[700px] lg:max-h-[900px] rounded-t-lg lg:rounded-l-lg lg:rounded-tr-none object-cover object-center"
             />
           </div>
@@ -38,7 +38,7 @@ export default function AboutPeek(props: Props) {
         <div
           id="post"
           className="flex flex-col justify-between p-6 space-y-7 md:p-8 lg:p-12 lg:w-1/2">
-          <h1 className="text-5xl font-medium">{header}</h1>
+          <h1 className="text-3xl lg:text-5xl font-medium">{header}</h1>
           <p className="text-lg">{subheader}</p>
           <Link href="/about">
             <Button variant="outline" className="mt-4">

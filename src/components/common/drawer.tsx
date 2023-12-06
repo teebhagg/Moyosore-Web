@@ -21,25 +21,49 @@ export function Drawer() {
         </Button>
       </SheetTrigger>
       <SheetContent>
-        <div className="flex flex-col mt-5 space-y-5">
-          <Link href="/">
-            <Button variant={"outline"}>Home</Button>
-          </Link>
-          <Link href="/portfolio">
-            <Button variant={"outline"}>Portfolio</Button>
-          </Link>
-          <Link href="/blog">
-            <Button variant={"outline"}>Blog</Button>
-          </Link>
-          <Link href="/projects">
-            <Button variant={"outline"}>Projects</Button>
-          </Link>
-          <Link href="/about">
-            <Button variant={"outline"}>About</Button>
-          </Link>
-          <Link href="/contact">
-            <Button variant={"outline"}>Contact</Button>
-          </Link>
+        <div className="flex flex-col mt-8 space-y-5">
+          <SheetClose asChild>
+            <Link href="/">
+              <Button variant={"outline"} className="w-full">
+                Home
+              </Button>
+            </Link>
+          </SheetClose>
+          <SheetClose asChild>
+            <Link href="/portfolio">
+              <Button variant={"outline"} className="w-full">
+                Portfolio
+              </Button>
+            </Link>
+          </SheetClose>
+          <SheetClose asChild>
+            <Link href="/blog">
+              <Button variant={"outline"} className="w-full">
+                Blog
+              </Button>
+            </Link>
+          </SheetClose>
+          <SheetClose asChild>
+            <Link href="/projects">
+              <Button variant={"outline"} className="w-full">
+                Projects
+              </Button>
+            </Link>
+          </SheetClose>
+          <SheetClose asChild>
+            <Link href="/about">
+              <Button variant={"outline"} className="w-full">
+                About
+              </Button>
+            </Link>
+          </SheetClose>
+          <SheetClose asChild>
+            <Link href="/contact">
+              <Button variant={"outline"} className="w-full">
+                Contact
+              </Button>
+            </Link>
+          </SheetClose>
         </div>
       </SheetContent>
     </Sheet>

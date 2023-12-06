@@ -27,11 +27,11 @@ export default function ContactBanner(props: Props) {
         <p id="subtitle" className=" text-white">
           {subTitle}
         </p>
-        <h1 id="title" className="text-4xl font-bold text-white">
+        <p id="title" className="text-2xl lg:text-4xl font-bold text-white text-center">
           {title}
-        </h1>
+        </p>
         <a href="/contact">
-        <Button variant="ghost" className="mt-4 text-white border hover:border-0">
+        <Button variant="ghost" size={"lg"} className="mt-4 text-white border hover:border-0">
           {link}
         </Button>
         </a>
