@@ -104,3 +104,14 @@ export interface ProjectsPeekInterface {
   _type: string;
   body: string;
 }
+
+export interface PortfolioInterface {
+  _id: string;
+  _rev: string;
+  _type: string;
+  _updatedAt: string;
+  _createdAt: string;
+  title: string;
+  subTitle: string;
+  imageCarousel: any[];
+}

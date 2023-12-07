@@ -1,6 +1,12 @@
 import React from "react";
 
-export default function PortfolioHeader() {
+interface Props {
+  title?: string;
+  subtitle?: string;
+}
+
+export default function PortfolioHeader(props: Props) {
+  const { title, subtitle } = props;
   return (
     <div className="w-full aspect-square">
       <div style={{ display: "block", clipPath: "inset(100px)" }} className="w-full">
@@ -28,8 +34,8 @@ export default function PortfolioHeader() {
           className="flex justify-center items-center"
         >
         <div className="text-white text-center">
-            <p className="text-lg">Subtitle</p>
-            <p className="text-2xl md:text-7xl font-bold">Title</p>
+            <p className="text-lg">{subtitle}</p>
+            <p className="text-2xl md:text-7xl font-bold">{title}</p>
         </div>
         </div>
       </div>
