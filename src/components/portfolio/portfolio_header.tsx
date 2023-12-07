@@ -2,8 +2,8 @@ import React from "react";
 
 export default function PortfolioHeader() {
   return (
-    <div className="w-full">
-      <div style={{ clipPath: "inset(70px)" }} className="w-full">
+    <div className="w-full aspect-square">
+      <div style={{ display: "block", clipPath: "inset(100px)" }} className="w-full">
         <iframe
           id="youtube-4333"
           frameBorder="O"
@@ -24,13 +24,13 @@ export default function PortfolioHeader() {
             width: "100%",
             height: "100%",
             opacity: 0.8,
-            // backgroundColor: "red",
           }}
           className="flex justify-center items-center"
-        />
-        <div>
+        >
+        <div className="text-white text-center">
             <p className="text-lg">Subtitle</p>
-            <p className="text-2xl">Title</p>
+            <p className="text-2xl md:text-7xl font-bold">Title</p>
+        </div>
         </div>
       </div>
     </div>

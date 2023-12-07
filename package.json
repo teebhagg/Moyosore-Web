@@ -18,6 +18,8 @@
     "@types/slick-carousel": "^1.6.40",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "flowbite": "^2.2.0",
+    "flowbite-react": "^0.7.0",
     "lucide-react": "^0.293.0",
     "next": "14.0.3",
     "next-sanity": "^7.0.0",

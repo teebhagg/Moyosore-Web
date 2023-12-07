@@ -11,9 +11,9 @@ export default function PortfolioPage() {
             <p className="text-5xl font-bold px-6 pt-20">Portfolio</p>
           <div className="flex flex-col items-center justify-between py-4 px-6">
             <PortfolioHeader />
-            <Separator className="mt-5" />
-            <Separator className="mb-5" />
-            {/* <CarouselSlider /> */}
+            {/* <Separator className="mt-5" />
+            <Separator className="mb-5" /> */}
+            <CarouselSlider />
           </div>
         </main>
       );
