@@ -10,7 +10,7 @@ const Footer = async () => {
   const { contactData } = await getContactData();
   const { socials } = contactData[0];
   return (
-    <footer className="bg-white shadow-md flex flex-col items-center justify-center px-6 py-4">
+    <footer className="bg-white border-t-2 shadow-md flex flex-col items-center justify-center px-6 py-4">
       {/* Social media links */}
       <div className="flex mt-4 space-x-7">
         {socials.map((social: any, index: number) => (

@@ -32,7 +32,7 @@ const CarouselSlider = (props: Props) => {
 
   return (
     // <div></div>
-    <div className="w-full aspect-square md:max-h-[500px]">
+    <div className="w-full aspect-square ">
       <FlowBiteCarousel className="block md:hidden">
         {images.map((image) => (
           <Image
