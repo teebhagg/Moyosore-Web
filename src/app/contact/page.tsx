@@ -5,6 +5,8 @@ import { coverImg } from "@/utils/data/images";
 import { getContactData } from "@/utils/data/contact_data";
 import { urlFor } from "../../../sanity/client";
 import { Link } from "lucide-react";
+import { ContactForm } from "@/components/contact/contact_form";
+import { Separator } from "@radix-ui/react-separator";
 
 export default async function ContactPage() {
   const { contactData } = await getContactData();
@@ -23,21 +25,11 @@ export default async function ContactPage() {
         </div>
         <div className="w-full h-full space-y-20 md:w-1/2">
           <p className="text-4xl font-medium px-6 pt-16">{title}</p>
-          <div className="flex flex-col space-y-5 px-6">
-          {socials.map((social: any, index: number) => (
-            // Send mail when social link title lowercase is "email"
-            <a
-              key={index}
-              href={ social.title === "Email" ? `mailto:${social.link}` : social.link}
-              target="_blank"
-              className={`text-2xl hover:underline ${social.title === "Email" ? "flex":"hidden"}`}
-            >
-              {social.title}
-            </a>
-          ))}
-          </div>
+          
         </div>
       </div>
+      <div className="border-t-2 mb-24 mx-6" />
+      <ContactForm />
     </main>
   );
 }
