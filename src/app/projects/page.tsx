@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 import { getProjects } from "@/utils/data/projects_data";
 
+export const revalidate = 1;
+
 export default async function ProjectsPage() {
   const { projectData } = await getProjects();
   return (

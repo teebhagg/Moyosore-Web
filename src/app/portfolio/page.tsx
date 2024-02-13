@@ -7,9 +7,15 @@ import { PortfolioInterface } from "@/utils/interface/home";
 import { Separator } from "@radix-ui/react-separator";
 import React, { useEffect } from "react";
 
+interface PortfolioProps {
+  title?: string;
+  subtitle?: string;
+  imageCarousel?: any[];
+}
+
 export default function PortfolioPage() {
   const [portfolio, setPortfolio] =
-    React.useState<PortfolioInterface>();
+    React.useState<PortfolioProps>();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,7 +36,7 @@ export default function PortfolioPage() {
       <div className="flex flex-col items-center justify-between py-4 px-6">
         <PortfolioHeader
           title={portfolio?.title}
-          subtitle={portfolio?.subTitle}
+          subtitle={portfolio?.subtitle}
         />
         {/* <Separator className="mt-5" />
             <Separator className="mb-5" /> */}

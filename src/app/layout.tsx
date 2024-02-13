@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: 'Explore the vibrant world of Fellowship, Medicine, Creativity, and People through the lens of an eccentric individual with a unique perspective on life.',
 }
 
-const revalidate = 1;
+export const revalidate = 1;
 
 export default function RootLayout({
   children,

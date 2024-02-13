@@ -9,6 +9,8 @@ import { client } from "../../sanity/client";
 import { HomeInterface } from "@/utils/interface/home";
 import { getData } from "@/utils/data/home_data";
 
+export const revalidate = 1;
+
 export default async function HomePage() {
   const { homeData } = await getData();
 
