@@ -9,6 +9,7 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { client } from "../../../../sanity/client";
 import BlockContent from "sanity/presentation";
+import ReactAudioPlayer from "react-audio-player";
 
 const revalidate = 1;
 
@@ -111,7 +112,13 @@ export default function BlogPost() {
   const { title, body, coverImage, subTitle } = blogData;
 
   return (
-    <main className="max-w-[1800px] mx-auto px-6 pt-10 pb-24 space-y-16">
+    <main className=" max-w-[1800px] mx-auto px-6 pt-10 pb-24 space-y-16">
+
+      {/* Audio Player */}
+      <div className="w-full sticky top-0 pt-2">
+        <ReactAudioPlayer controls className="w-full" />
+      </div>
+
       {/* Cover Image */}
       <BlogPostCoverImage image={coverImage} title={title} />
 

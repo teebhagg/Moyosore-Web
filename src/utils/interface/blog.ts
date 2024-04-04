@@ -42,6 +42,7 @@ let blogSchema = {
         _type: string
       }
     }
+    audio: any
     slug: {
       _type: string
       current: string
