@@ -115,9 +115,9 @@ export default function BlogPost() {
     <main className=" max-w-[1800px] mx-auto px-6 pt-10 pb-24 space-y-16">
 
       {/* Audio Player */}
-      {/* <div className="w-full sticky top-0 pt-2">
-        <ReactAudioPlayer controls className="w-full" />
-      </div> */}
+      <div className="w-full sticky top-0 pt-2">
+        <ReactAudioPlayer src={blogData?.audio} controls className="w-full" />
+      </div>
 
       {/* Cover Image */}
       <BlogPostCoverImage image={coverImage} title={title} />
