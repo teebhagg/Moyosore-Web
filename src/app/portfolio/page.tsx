@@ -32,7 +32,7 @@ export default function PortfolioPage() {
 
   return (
     <main className="max-w-[1800px] mx-auto">
-      <p className="text-5xl font-bold px-6 pt-20">Portfolio</p>
+      <p className=" text-2xl md:text-3xl lg:text-5xl font-bold px-6 pt-20">Portfolio</p>
       <div className="flex flex-col items-center justify-between py-4 px-6">
         <PortfolioHeader
           title={portfolio?.title}

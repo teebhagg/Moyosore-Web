@@ -12,7 +12,7 @@ export default async function ContactPage() {
   const { contactData } = await getContactData();
   const { title, coverImage, socials } = contactData[0];
   return (
-    <main className="max-w-[1800px] mx-auto">
+    <main className="max-w-[1800px] md:mx-auto">
       <div className="flex flex-col md:flex-row items-start justify-between space-x-5 py-24 px-6">
         <div className="w-full md:w-1/2">
           <Image
@@ -23,9 +23,8 @@ export default async function ContactPage() {
             className="w-full aspect-[4/5] rounded-lg object-cover"
           />
         </div>
-        <div className="w-full h-full space-y-20 md:w-1/2">
-          <p className="text-4xl font-medium px-6 pt-16">{title}</p>
-          
+        <div className="w-full h-full md:space-y-20 md:w-1/2">
+          <p className="text-2xl md:text-4xl font-medium px-6 pt-16">{title}</p>
         </div>
       </div>
       <div className="border-t-2 mb-24 mx-6" />

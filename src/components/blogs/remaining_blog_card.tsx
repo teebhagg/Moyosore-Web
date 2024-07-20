@@ -13,13 +13,13 @@ export default function RemainingBlogCard(props: Props) {
   const { header, blogLink, image } = props;
   return (
     <Link href="/blog/[id]" as={`/blog/${blogLink}`} className="">
-      <div className="flex md:hidden items-center space-x-5 w-full rounded-md hover:border hover:bg-slate-200">
+      <div className="flex md:hidden items-center space-x-5 w-full p-2 rounded-lg hover:border hover:bg-slate-200">
         <Image
           src={urlFor(image).url()}
           alt="Moyosore"
           width={400}
           height={400}
-          className="max-w-[150px] max-h-[150px] aspect-[4/4] rounded-lg object-cover"
+          className="max-w-[150px] max-h-[150px] aspect-[4/4] rounded-md object-cover"
         />
         <p>{header}</p>
       </div>
@@ -32,7 +32,7 @@ export default function RemainingBlogCard(props: Props) {
           backgroundRepeat: "no-repeat",
         }}
         className="hidden md:flex justify-center items-center h-[150px] space-x-5 w-full rounded-md">
-        <p className="text-3xl text-white">{header}</p>
+        <p className=" text-xl text-white text-center">{header}</p>
       </div>
     </Link>
   );

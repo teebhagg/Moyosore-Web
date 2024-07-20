@@ -11,7 +11,7 @@ import { client } from "../../../../sanity/client";
 import BlockContent from "sanity/presentation";
 import ReactAudioPlayer from "react-audio-player";
 
-const revalidate = 1;
+export const revalidate = 1;
 
 export default function BlogPost() {
   //Blog States
@@ -124,7 +124,7 @@ export default function BlogPost() {
 
       {/* Content */}
       <div className="space-y-5 lg:space-y-10 text-center">
-        <p className="text-3xl lg:text-5xl font-bold">{subTitle}</p>
+        <p className="text-2xl md:text-3xl lg:text-5xl font-bold">{subTitle}</p>
         <p className="text-lg text-left">
           <PortableText value={body} components={myPortableTextComponents} />
         </p>
@@ -132,7 +132,7 @@ export default function BlogPost() {
 
       {/* Related Blogs */}
       <div className="">
-        <p className="text-3xl lg:text-5xl font-bold mb-10">Related Blogs</p>
+        <p className="text-2xl md:text-3xl lg:text-5xl font-bold mb-10">Related Blogs</p>
         <div className="flex md:grid flex-col md:grid-cols-3 gap-5 space-y-5 md:space-y-0">
           {remainderBlogs.map((blog: BlogInterface, index: number) => (
             <RemainingBlogCard

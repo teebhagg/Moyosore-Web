@@ -24,7 +24,7 @@ export default function BlogPostCoverImage(props: Props) {
     {/* Title and Button in bottom */}
     <div className="w-full h-full flex flex-col justify-end items-center pb-8 md:pb-10 lg:pb-14">
       <p className="">{category}</p>
-      <h1 className="text-3xl lg:text-5xl font-bold text-white">{title}</h1>
+      <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white">{title}</h1>
       <p className="">{datePublished}</p>
     </div>
     
