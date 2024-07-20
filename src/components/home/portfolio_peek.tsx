@@ -13,7 +13,7 @@ export default function PortfolioPeek(props: Props) {
   const { images } = props;
   return (
     <div className="space-y-5">
-      <div id="portfolio" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
+      <div id="portfolio" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5 w-full">
         {images.map((image: any, index: number) => (
           <ImageCard key={index} url={urlFor(image.image).url()} />
         ))}

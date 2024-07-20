@@ -37,7 +37,7 @@ const Footer = async () => {
       </div>
 
       <p className="text-gray-500 text-sm mt-4">
-        Copyright © 2023 Moyosore. All rights reserved.
+        Copyright © {new Date().getFullYear()} Moyosore. All rights reserved.
       </p>
     </footer>
   );
