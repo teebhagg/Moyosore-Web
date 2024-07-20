@@ -23,45 +23,57 @@ export function Drawer() {
       <SheetContent>
         <div className="flex flex-col mt-8 space-y-5">
           <SheetClose asChild>
-            <Link href="/">
-              <Button variant={"outline"} className="w-full">
+            <Link href="/" className="underline-animation">
                 Home
-              </Button>
             </Link>
           </SheetClose>
           <SheetClose asChild>
-            <Link href="/portfolio">
-              <Button variant={"outline"} className="w-full">
+            <Link href="/portfolio" className="underline-animation">
+              {/* <Button variant={"outline"} className="w-full"> */}
                 Portfolio
-              </Button>
+              {/* </Button> */}
             </Link>
           </SheetClose>
           <SheetClose asChild>
-            <Link href="/blog">
-              <Button variant={"outline"} className="w-full">
+            <Link href="/blog" className="underline-animation">
+              {/* <Button variant={"outline"} className="w-full"> */}
                 Blog
-              </Button>
+              {/* </Button> */}
             </Link>
           </SheetClose>
           <SheetClose asChild>
-            <Link href="/projects">
-              <Button variant={"outline"} className="w-full">
+            <Link href="/prayer-request" className="underline-animation">
+              {/* <Button variant={"outline"} className="w-full"> */}
+                Prayer Request
+              {/* </Button> */}
+            </Link>
+          </SheetClose>
+          <SheetClose asChild>
+            <Link href="/testimonies" className="underline-animation">
+              {/* <Button variant={"outline"} className="w-full"> */}
+                Testimonies
+              {/* </Button> */}
+            </Link>
+          </SheetClose>
+          <SheetClose asChild>
+            <Link href="/projects" className="underline-animation">
+              {/* <Button variant={"outline"} className="w-full"> */}
                 Projects
-              </Button>
+              {/* </Button> */}
             </Link>
           </SheetClose>
           <SheetClose asChild>
-            <Link href="/about">
-              <Button variant={"outline"} className="w-full">
+            <Link href="/about" className="underline-animation">
+              {/* <Button variant={"outline"} className="w-full"> */}
                 About
-              </Button>
+              {/* </Button> */}
             </Link>
           </SheetClose>
           <SheetClose asChild>
-            <Link href="/contact">
-              <Button variant={"outline"} className="w-full">
+            <Link href="/contact" className="underline-animation">
+              {/* <Button variant={"outline"} className="w-full"> */}
                 Contact
-              </Button>
+              {/* </Button> */}
             </Link>
           </SheetClose>
         </div>

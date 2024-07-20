@@ -6,7 +6,7 @@ export default function AnnouncementBanner() {
       <div className="flex flex-col items-center justify-between sm:flex-row">
         <div className="space-y-2 text-center sm:text-left mb-5 md:mb-0">
           <h2 className="text-2xl font-bold text-gray-50 sm:text-3xl">New Feature</h2>
-          <p className="text-sm text-gray-400">Send Prayer Points</p>
+          <p className="text-sm text-gray-400">Send Prayer Requests</p>
         </div>
         <Link
           href="/prayer-request"
