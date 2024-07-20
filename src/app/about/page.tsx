@@ -12,7 +12,7 @@ export default async function AboutPage() {
   return (
     <main className="max-w-[1800px] mx-auto space-y-10">
       <p className="text-lg px-6 pt-20 text-center">{title}</p>
-      <p className="text-5xl font-semibold px-6 text-center">{subTitle}</p>
+      <p className="text-2xl md:text-3xl lg:text-5xl font-semibold px-6 text-center">{subTitle}</p>
       <div className="flex items-center justify-between py-8 px-6 ">
         <AboutPeek
           header={aboutCard.header}
