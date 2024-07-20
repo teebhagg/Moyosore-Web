@@ -8,6 +8,7 @@ import Image from "next/image";
 import { client } from "../../sanity/client";
 import { HomeInterface } from "@/utils/interface/home";
 import { getData } from "@/utils/data/home_data";
+import AnnouncementBanner from "@/components/home/banner";
 
 export const revalidate = 1;
 
@@ -16,6 +17,7 @@ export default async function HomePage() {
 
   return (
     <main className="max-w-[1800px] mx-auto">
+      <AnnouncementBanner />
       <div className="flex flex-col items-center justify-between pt-10 pb-24 px-4 space-y-24">
         <CoverImage
           image={homeData[0].coverImage.image}
