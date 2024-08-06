@@ -107,6 +107,8 @@ export default function BlogPost() {
     return null;
   }
 
+  console.log(blogData?.coverImage)
+
   // blogData && console.log(blogData);
 
   const { title, body, coverImage, subTitle } = blogData;

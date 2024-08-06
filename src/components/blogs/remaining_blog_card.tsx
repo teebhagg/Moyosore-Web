@@ -11,6 +11,7 @@ interface Props {
 
 export default function RemainingBlogCard(props: Props) {
   const { header, blogLink, image } = props;
+  if (!image) return null;
   return (
     <Link href="/blog/[id]" as={`/blog/${blogLink}`} className="">
       <div className="flex md:hidden items-center space-x-5 w-full p-2 rounded-lg hover:border hover:bg-slate-200">

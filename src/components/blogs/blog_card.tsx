@@ -10,11 +10,14 @@ interface Props {
 
 export default function BlogCard(props: Props) {
   const { blogData } = props;
+  if (!blogData || !blogData.coverImage) {
+    return null; // Handle the case where blogData or coverImage is undefined
+  }
   return (
     <Link href="/blog/[id]" as={`/blog/${blogData.slug.current}`}>
     <div className='rounded-xl space-y-4 p-[12px] hover:p-[10px] hover:border-2 hover:border-slate-300 hover:shadow-lg'>
-      <Image
-        src={urlFor(blogData.coverImage).url()}
+      <img
+        src={urlFor(blogData?.coverImage)?.url() ?? ""}
         alt="Moyosore"
         width={400}
         height={400}
