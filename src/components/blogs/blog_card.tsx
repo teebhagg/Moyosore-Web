@@ -55,7 +55,7 @@ export default function BlogCard(props: Props) {
             {blogData.category && (
               <div className="absolute top-4 left-4">
                 <span className="px-3 py-1 text-xs font-semibold text-white bg-blue-600 rounded-full backdrop-blur-sm">
-                  {blogData.category.title || "Blog"}
+                  Blog
                 </span>
               </div>
             )}
