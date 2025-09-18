@@ -1,15 +1,7 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { Card } from "@/components/ui/card";
 import Image from "next/image";
-import { coverImg } from "@/utils/data/images";
+import Link from "next/link";
 import { urlFor } from "../../../sanity/client";
 
 interface Props {
@@ -22,16 +14,15 @@ interface Props {
 export default function AboutPeek(props: Props) {
   const { header, subheader, aboutLink, image } = props;
   return (
-    <Card className="w-full p-0">
-      <div className="flex flex-col lg:flex-row min-h-[400px] w-full">
+    <Card className="w-full p-0 rounded-3xl overflow-hidden h-[900px]">
+      <div className="flex flex-col lg:flex-row h-full w-full">
         <div id="image" className="w-full lg:w-[calc(35%)] h-full">
-          <div className="relative h-full">
+          <div className="relative h-full w-full">
             <Image
               src={urlFor(image).url()}
               alt="Moyosore"
-              width={500}
-              height={500}
-              className="h-full w-full max-h-[700px] lg:h-full rounded-t-lg lg:rounded-l-lg lg:rounded-tr-none object-cover object-center"
+              fill
+              className="rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none object-cover object-center"
             />
           </div>
         </div>

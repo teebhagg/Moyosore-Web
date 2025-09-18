@@ -1,10 +1,9 @@
-import ComingSoon from '@/components/common/coming-soon'
-import React from 'react'
+import ComingSoon from "@/components/common/coming-soon";
 
 export default function Testimonies() {
   return (
-    <div>
-        <ComingSoon />
+    <div className="pt-[150px]">
+      <ComingSoon />
     </div>
-  )
+  );
 }

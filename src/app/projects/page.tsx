@@ -1,7 +1,6 @@
 import ProjectCard from "@/components/projects/project_card";
 import Link from "next/link";
 
-import { Separator } from "@/components/ui/separator";
 import { getProjects } from "@/utils/data/projects_data";
 
 export const revalidate = 1;
@@ -10,7 +9,9 @@ export default async function ProjectsPage() {
   const { projectData } = await getProjects();
   return (
     <main className="max-w-[1800px] mx-auto">
-      <p className=" text-2xl md:text-3xl lg:text-5xl font-bold px-6 pt-20">Some Projects</p>
+      <p className=" text-2xl md:text-3xl lg:text-5xl font-bold px-6 pt-[150px]">
+        Some Projects
+      </p>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 w-full py-4 px-6">
         {/* <ProjectCard /> */}
         {projectData.map((project: any, index: number) => (

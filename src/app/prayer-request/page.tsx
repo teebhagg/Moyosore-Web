@@ -1,28 +1,27 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Skeleton } from "@/components/ui/skeleton";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
 import { getPrayerRequest } from "@/utils/data/prayer_request";
 import { PrayerRequestInterface } from "@/utils/interface/prayer_request";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
-import React, { useState, useEffect, Suspense } from "react";
+import Image from "next/image";
+import { Suspense, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import * as zod from "zod";
-import Image from "next/image";
 import { urlFor } from "../../../sanity/client";
-import { Skeleton } from "@/components/ui/skeleton";
 
 const formSchema = zod.object({
   fullName: zod.string().min(1, {
@@ -95,17 +94,19 @@ export default function PrayerPoints() {
     fetchData();
   }, []);
 
-  const loader = (<Skeleton className="aspect-[16/9] w-full max-w-7xl max-h-[400px] px-10 rounded-[8px]" />);
+  const loader = (
+    <Skeleton className="aspect-[16/9] w-full max-w-7xl max-h-[400px] px-10 rounded-[8px]" />
+  );
 
   return (
     <div>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(handleSubmit)}
-          className="space-y-10 py-10 w-full flex flex-col items-center ">
+          className="space-y-10 pt-[150px] pb-10 w-full flex flex-col items-center ">
           {prayerRequest && (
             <p className="text-3xl font-medium">{prayerRequest.title}</p>
-            )}
+          )}
           {prayerRequest && (
             <Suspense fallback={loader}>
               <Image
@@ -114,10 +115,10 @@ export default function PrayerPoints() {
                 width={400}
                 height={400}
                 className="aspect-[16/9] w-full max-w-7xl max-h-[400px] px-10 rounded-[8px] object-cover"
-                />
-              </Suspense>
+              />
+            </Suspense>
           )}
-          {!prayerRequest && (loader)}
+          {!prayerRequest && loader}
           {prayerRequest && (
             <p className="text font-medium">{prayerRequest.description}</p>
           )}

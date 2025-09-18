@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { coverImg } from "@/utils/data/images";
 import Image from "next/image";
-import { urlFor } from "../../../sanity/client";
 import Link from "next/link";
+import { urlFor } from "../../../sanity/client";
 
 interface Props {
   header: string;
@@ -15,16 +14,17 @@ interface Props {
 export default function BlogPeek(props: Props) {
   const { header, subheader, blogLink, image } = props;
   return (
-    <Card className="w-full p-0">
-      <div className="flex flex-col lg:flex-row min-h-[400px] w-full">
-      <div id="image" className="w-full lg:w-[calc(35%)] h-full">
-          <Image
-            src={urlFor(image).url()}
-            alt="Moyosore"
-            width={400}
-            height={400}
-            className="h-full w-full max-h-[700px] lg:h-full rounded-t-lg lg:rounded-l-lg lg:rounded-tr-none object-cover object-center"
-          />
+    <Card className="w-full p-0 rounded-3xl overflow-hidden h-[900px]">
+      <div className="flex flex-col lg:flex-row h-full w-full">
+        <div id="image" className="w-full lg:w-[calc(35%)] h-full">
+          <div className="relative h-full w-full">
+            <Image
+              src={urlFor(image).url()}
+              alt="Moyosore"
+              fill
+              className="rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none object-cover object-center"
+            />
+          </div>
         </div>
         <div
           id="post"
@@ -36,12 +36,12 @@ export default function BlogPeek(props: Props) {
             <p className="text-lg">{subheader}</p>
           </div>
           <div className="flex justify-end">
-          <Link href="/blog">
-            <Button variant="outline" className="mt-4">
-              {" "}
-              {blogLink}{" "}
-            </Button>
-          </Link>
+            <Link href="/blog">
+              <Button variant="outline" className="mt-4">
+                {" "}
+                {blogLink}{" "}
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
